@@ -12,26 +12,38 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
 #TODO:tratar números negativos
 #TODO:Calcular raízes genéricas
 
-#define função para chue inicial
-def calc_ini(Numero)
+##define as funções necessárias ao processamento
+#Calcula a raiz
+def raiz_quadrada(incognita):
+    chute=calc_ini(incognita)
+    teto_superior=100
+    for n in range(0,teto_superior):
+        chute=(chute+(numero/chute))*(1/2)
+    return chute
+#Calcula o chute inicial
+def calc_ini(Numero):
 #TODO:Otimizar a procura, talvez procura binaria, para reduzir os numeros buscados
     n=1
     quadrado=n*n
-
     while(quadrado<Numero):
         n=n+1
         quadrado=n*n
     return n
+#Valor de precisão para parada
+precisao=0.00001
+#Calcula se o calculo já tá preciso
+def defina_precisao(anterior, atual):
+    resposta=False
+    valor_teste=anterior-atual
+    if(valor_teste<=precisao):
+        resposta=True
+    else:
+        resposta=False
+    return resposta
 
 ##Entrada de dados
 
-'''
-    Função calculadora de raízes quadradasbaseada no método de Newton-Raphson
-    Antes de ser ativada é necessário alguns processamentos para evitar exceçoes
-        1-Não tratar numeros negativos
-        2-deifinir um bom chute inicial
-    
-'''
+#Tratamentos antes do calculo
 numero=int(input("Digite o valor de n\n"))
 if(numero<0):
     print("numero negativo não pode ser tratado")
@@ -49,13 +61,17 @@ else:
     print("meu chute inicial será ",str(inicial))
 
 ##processamento
+
+teste=False#Definição de teste para ser iterado
+while(teste==False):
+    tmp=chute_n #armazena o valor atual de chute_n para posterior calculo
+    chute_n=(chute_n+(numero/chute_n))*(1/2)#calcula chute_n
+    teste=defina_precisao(tmp,chute_n) #valor bool que avalia se já ta preciso
+
+
 '''Declaração modular da função de calcula raiz quadrada'''
-def raiz_quadrada(incognita):
-    chute=calc_ini(incognita)
-    teto_superior=100
-    for n in range(0,teto_superior):
-        chute=(chute+(numero/chute))*(1/2)
-    return chute
+
 chute_n=raiz_quadrada(numero)
+
 ##Saída
 print("A raiz é ",chute_n)
