@@ -63,7 +63,7 @@ def pre_calc(numero):
     else:
         resposta=True
     return resposta
-#Calcula uma raiz de grau n qaulquer
+#Calcula uma raiz de grau n qualquer
 def calcula_raiz_generica(numero,grau):
     teto_superior=100
     palpite=100
