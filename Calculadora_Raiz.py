@@ -12,7 +12,7 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
 #TODO:tratar números negativos
 #TODO:Calcular raízes genéricas
 
-##define as funções necessárias ao processamento
+#####################################define as funções necessárias ao processamento#####################################
 #Calcula a raiz
 def raiz_quadrada(incognita):
     chute=calc_ini(incognita)
@@ -41,37 +41,46 @@ def defina_precisao(anterior, atual):
         resposta=False
     return resposta
 
-##Entrada de dados
+#calcula a raiz de outro jeito
+def calcula_raiz_limite(entrada):
 
-#Tratamentos antes do calculo
-numero=int(input("Digite o valor de n\n"))
-if(numero<0):
-    print("numero negativo não pode ser tratado")
-    numero_positivo=numero*(-1)
-    print("Você quis dizer {}".format(numero_positivo))
-    condicao=input("(S/N): ")
+    teste=False #Definição de variavel teste para ser iterado
+    while(teste==False):
+        tmp=chute_n #armazena o valor atual de chute_n para posterior calculo
+        chute_n=(chute_n+(numero/chute_n))*(1/2) #calcula chute_n
+        teste=defina_precisao(tmp,chute_n) #valor bool que avalia se já ta preciso
+    return chute_n
+#Trata o numero antes do calculo
+def pre_calc(numero):
+    resposta=False
+    if(numero<0):
+        print("numero negativo não pode ser tratado")
+        numero_positivo=numero*(-1)
+        print("Você quis dizer {}".format(numero_positivo))
+        condicao=input("(S/N): ")
 
-    if(condicao=='S' or condicao== 's'):
-        print("OK")
+        if(condicao=='S' or condicao== 's'):
+            print("OK")
+        else:
+            print("então foda-se\n")
     else:
-        print("então foda-se\n")
-else:
-    inicial=calc_ini(numero)
-    chute_n=inicial
-    print("meu chute inicial será ",str(inicial))
+        resposta=True
+    return resposta
 
-##processamento
+#################################Entrada de dados######################################################################
+numero = int(input("Digite o valor de n\n"))
+#Tratamentos antes do calculo
+procedencia=False
+procedencia=pre_calc(numero)
+if(procedencia==False):
+    print("Não faço!!")
+    Resultado='Não existe!!'
+else:#Só avança para o processamento se estiver tudo certo
+    print("OK,Eu faço pra você")
 
-teste=False#Definição de teste para ser iterado
-while(teste==False):
-    tmp=chute_n #armazena o valor atual de chute_n para posterior calculo
-    chute_n=(chute_n+(numero/chute_n))*(1/2)#calcula chute_n
-    teste=defina_precisao(tmp,chute_n) #valor bool que avalia se já ta preciso
+###############################processamento############################################################################
 
+    Resultado=raiz_quadrada(numero)
 
-'''Declaração modular da função de calcula raiz quadrada'''
-
-chute_n=raiz_quadrada(numero)
-
-##Saída
-print("A raiz é ",chute_n)
+################################ Saída #################################################################################
+print("A raiz é ",Resultado)
