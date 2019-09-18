@@ -33,6 +33,7 @@ else:#Só avança para o processamento se estiver tudo certo
 
     ##Resultado=Calculator.raiz_quadrada(numero)
     #Resultado=Calculator.calcula_raiz_limite(numero)
-    Resultado=Calculator.calcula_raiz_generica(numero,2)
+    grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
+    Resultado=Calculator.calcula_raiz_generica(numero,grau)
 ################################ Saída #################################################################################
 print("A raiz é ",Resultado)

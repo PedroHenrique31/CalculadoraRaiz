@@ -63,7 +63,26 @@ def pre_calc(numero):
     else:
         resposta=True
     return resposta
+#Calcula uma raiz de grau n qaulquer
+def calcula_raiz_generica(numero,grau):
+    teto_superior=100
+    palpite=100
+    def funcao(enesimo):
+        f=0
+        f=(enesimo**grau)-numero
+        return f
+    def derivada_funcao(enesimo):
+        f=0
+        f=grau*(enesimo**(grau-1))
+        return f
+    for n in range(0,teto_superior):
+        func=funcao(palpite)
+        dervfunc=derivada_funcao(palpite)
+        print("func={} dervfunc={} Raiz={} \n".format(func,dervfunc,palpite))
+        palpite=(palpite-(func/dervfunc))
+    return palpite
 
+'''
 def calcula_raiz_generica(numero,grau):#grau é a n raiz, se grau=2 a raiz é quadrada
     teto_superior=1000
     palpite=1
@@ -82,3 +101,4 @@ def calcula_raiz_generica(numero,grau):#grau é a n raiz, se grau=2 a raiz é qu
         palpite=(palpite+(func/dervfunc)
 
     return palpite
+'''
