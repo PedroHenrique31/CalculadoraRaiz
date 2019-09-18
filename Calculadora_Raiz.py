@@ -16,10 +16,13 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
 import Calculator
 
 #################################Entrada de dados######################################################################
+'''     Nessa parte fazemos testes para tratar excessões numéricas tais quais números negativos
+
+'''
 numero = int(input("Digite o valor de n\n"))
 #Tratamentos antes do calculo
 procedencia=False
-procedencia=pre_calc(numero)
+procedencia=Calculator.pre_calc(numero)
 if(procedencia==False):
     print("Não faço!!")
     Resultado='Não existe!!'
@@ -28,7 +31,8 @@ else:#Só avança para o processamento se estiver tudo certo
 
 ###############################processamento############################################################################
 
-    Resultado=raiz_quadrada(numero)
-
+    ##Resultado=Calculator.raiz_quadrada(numero)
+    #Resultado=Calculator.calcula_raiz_limite(numero)
+    Resultado=Calculator.calcula_raiz_generica(numero,2)
 ################################ Saída #################################################################################
 print("A raiz é ",Resultado)

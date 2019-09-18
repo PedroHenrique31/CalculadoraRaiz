@@ -7,13 +7,15 @@ o método de Newton-Raphson, que consiste da seguinte fórmula:
     f(x) é a função X**n-q=0, cuja a raiz é a raiz enesima de q;
     X(n) é o enésimo valor de x;
 """
+#TODO:criar função para raiz generica aqui
 #Calcula a raiz
 def raiz_quadrada(incognita):
     chute=calc_ini(incognita)
     teto_superior=100
     for n in range(0,teto_superior):
-        chute=(chute+(numero/chute))*(1/2)
+        chute=(chute+(incognita/chute))*(1/2)
     return chute
+
 #Calcula o chute inicial
 def calc_ini(Numero):
 #TODO:Otimizar a procura, talvez procura binaria, para reduzir os numeros buscados
@@ -38,10 +40,11 @@ def defina_precisao(anterior, atual):
 #calcula a raiz de outro jeito
 def calcula_raiz_limite(entrada):
 
+    chute_n=calc_ini(entrada)
     teste=False #Definição de variavel teste para ser iterado
     while(teste==False):
         tmp=chute_n #armazena o valor atual de chute_n para posterior calculo
-        chute_n=(chute_n+(numero/chute_n))*(1/2) #calcula chute_n
+        chute_n=(chute_n+(entrada/chute_n))*(1/2) #calcula chute_n
         teste=defina_precisao(tmp,chute_n) #valor bool que avalia se já ta preciso
     return chute_n
 #Trata o numero antes do calculo
@@ -61,3 +64,21 @@ def pre_calc(numero):
         resposta=True
     return resposta
 
+def calcula_raiz_generica(numero,grau):#grau é a n raiz, se grau=2 a raiz é quadrada
+    teto_superior=1000
+    palpite=1
+    def funcao(enesimo):
+        f=0
+        f=(enesimo**grau)-numero
+        return f
+
+    def funcao_derivada(enesimo):
+        f=grau*(enesimo**(grau-1))
+        return f
+
+    for n in range(0,teto_superior):
+        func=funcao(palpite)
+        dervfunc=funcao_derivada(palpite)
+        palpite=(palpite+(func/dervfunc)
+
+    return palpite
