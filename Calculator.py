@@ -84,23 +84,16 @@ def calcula_raiz_generica(numero,grau):
         palpite=(palpite-(func/dervfunc))
     return palpite
 
-'''
-def calcula_raiz_generica(numero,grau):#grau é a n raiz, se grau=2 a raiz é quadrada
-    teto_superior=1000
-    palpite=1
-    def funcao(enesimo):
-        f=0
-        f=(enesimo**grau)-numero
-        return f
-
-    def funcao_derivada(enesimo):
-        f=grau*(enesimo**(grau-1))
-        return f
-
-    for n in range(0,teto_superior):
-        func=funcao(palpite)
-        dervfunc=funcao_derivada(palpite)
-        palpite=(palpite+(func/dervfunc)
-
-    return palpite
-'''
+def mdc(numero1,numero2):
+    if(numero1>numero2):
+        a=numero1
+        b=numero2
+    else:
+        a=numero2
+        b=numero1
+    modulo=a % b#calcula o modulo da divisão
+    if(modulo!=0):
+        resposta=mdc(b,modulo)
+    else:
+        resposta=b
+    return resposta

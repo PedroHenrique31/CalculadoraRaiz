@@ -7,7 +7,7 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
     1-4984011032943903
     2-5234219170632858-794
 '''
-#TODO: tentar definir o mdc dos numeros pelo algoritmo de euclides
+#TODO: Melhorar a interface com usuário para organizar as funções.
 #TODO:tratar números negativos
 
 #####################################define as funções necessárias ao processamento####################################
@@ -32,6 +32,9 @@ else:#Só avança para o processamento se estiver tudo certo
     ##Resultado=Calculator.raiz_quadrada(numero)
     #Resultado=Calculator.calcula_raiz_limite(numero)
     grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
-    Resultado=Calculator.calcula_raiz_generica(numero,grau)
+    #Resultado=Calculator.calcula_raiz_generica(numero,grau)
+    mdc=Calculator.mdc(numero,grau)
+
 ################################ Saída #################################################################################
-print("A raiz é ",Resultado)
+#print("A raiz é ",Resultado)
+print("E o mdc deles é {}".format(mdc))
