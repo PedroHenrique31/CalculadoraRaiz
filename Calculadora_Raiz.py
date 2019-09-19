@@ -8,9 +8,7 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
     2-5234219170632858-794
 '''
 #TODO: tentar definir o mdc dos numeros pelo algoritmo de euclides
-#TODO: Usar objeto para a classe calculadora
 #TODO:tratar números negativos
-#TODO:Calcular raízes genéricas
 
 #####################################define as funções necessárias ao processamento####################################
 import Calculator

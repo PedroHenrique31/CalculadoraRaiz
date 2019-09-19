@@ -64,6 +64,8 @@ def pre_calc(numero):
         resposta=True
     return resposta
 #Calcula uma raiz de grau n qualquer
+#TODO:Melhorar a busca por um chute inicial ao invés de um chute fixo.
+#TODO:Solucionar o problema da parada ela precisão e não por iterações fixas.
 def calcula_raiz_generica(numero,grau):
     teto_superior=100
     palpite=100
