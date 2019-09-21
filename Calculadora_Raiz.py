@@ -25,10 +25,18 @@ numero = 3#só pra não perder
 ###############################processamento############################################################################
     #TODO: melhorar essa interface
     ##Resultado=Calculator.raiz_quadrada(numero)
-    #Resultado=Calculator.calcula_raiz_limite(numero)
-    grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
-    Resultado=Calculator.calcula_raiz_generica(numero,grau)
-    #mdc=Calculator.mdc(numero,grau)
+    if(opcao=1):
+        numero=int(input("Qual o número  desejas saber a raiz?"))
+        Resultado=Calculator.calcula_raiz_limite(numero)
+    elif(opcao=2):
+        numero=int(input("Digite o valor que quer calcular\n"))
+        grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
+        Resultado=Calculator.calcula_raiz_generica(numero,grau)
+    elif(opcao==3):
+        numero=int(input("Digite os valores que quer calcular\n"))
+        grau=int(input("Agora o segundo numero:"))
+        mdc=Calculator.mdc(numero,grau)
+        Resultado=mdc
 
 ################################ Saída #################################################################################
 #print("A raiz é ",Resultado)
