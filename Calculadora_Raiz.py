@@ -17,16 +17,11 @@ import Calculator
 '''     Nessa parte fazemos testes para tratar excessões numéricas tais quais números negativos
 
 '''
-numero = int(input("Digite o valor de n\n"))
-#Tratamentos antes do calculo
-procedencia=False
-procedencia=Calculator.pre_calc(numero)
-if(procedencia==False):
-    print("Não faço!!")
-    Resultado='Não existe!!'
-else:#Só avança para o processamento se estiver tudo certo
-    print("OK,Eu faço pra você")
+print("Ola o que voce deseja fazer\n(1)Calcular uma raiz quadrada\n(2)Calcular uma raiz generica\n(3)Calcular o mdc de dois numeros.\n")
+opcao=int(input("Digite a opção desejada"))
 
+numero = 3#só pra não perder
+#Tratamentos antes do calculo
 ###############################processamento############################################################################
 
     ##Resultado=Calculator.raiz_quadrada(numero)
