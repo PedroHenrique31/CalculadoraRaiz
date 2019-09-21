@@ -84,7 +84,7 @@ def calcula_raiz_generica(numero,grau):
         print("func={} dervfunc={} Raiz={} \n".format(func,dervfunc,palpite))
         palpite=(palpite-(func/dervfunc))
     return palpite
-
+#TODO:Eliminar as chamadas rescursivas
 def mdc(numero1,numero2):
     if(numero1>numero2):
         a=numero1

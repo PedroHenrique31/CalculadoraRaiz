@@ -14,7 +14,7 @@ Obs: porque não testar com numeros grandes como os dos cartões de credito:
 import Calculator
 
 #################################Entrada de dados######################################################################
-'''     Nessa parte fazemos testes para tratar excessões numéricas tais quais números negativos
+'''     Nessa parte fazemos testes para tratar excessões numéricas tais quais números negativos, para as raízes pares
 
 '''
 print("Ola o que voce deseja fazer\n(1)Calcular uma raiz quadrada\n(2)Calcular uma raiz generica\n(3)Calcular o mdc de dois numeros.\n")
@@ -23,12 +23,12 @@ opcao=int(input("Digite a opção desejada"))
 numero = 3#só pra não perder
 #Tratamentos antes do calculo
 ###############################processamento############################################################################
-
+    #TODO: melhorar essa interface
     ##Resultado=Calculator.raiz_quadrada(numero)
     #Resultado=Calculator.calcula_raiz_limite(numero)
     grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
-    #Resultado=Calculator.calcula_raiz_generica(numero,grau)
-    mdc=Calculator.mdc(numero,grau)
+    Resultado=Calculator.calcula_raiz_generica(numero,grau)
+    #mdc=Calculator.mdc(numero,grau)
 
 ################################ Saída #################################################################################
 #print("A raiz é ",Resultado)
