@@ -7,7 +7,8 @@ o método de Newton-Raphson, que consiste da seguinte fórmula:
     f(x) é a função X**n-q=0, cuja a raiz é a raiz enesima de q;
     X(n) é o enésimo valor de x;
 """
-#TODO:criar função para raiz generica aqui
+
+#TODO:usar um somador deseries para calcular pi e outros numeros
 #Calcula a raiz
 def raiz_quadrada(incognita):
     chute=calc_ini(incognita)
