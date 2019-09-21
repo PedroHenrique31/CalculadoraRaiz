@@ -33,3 +33,4 @@ numero = 3#só pra não perder
 ################################ Saída #################################################################################
 #print("A raiz é ",Resultado)
 print("E o mdc deles é {}".format(mdc))
+print("Obrigado por tudo,tchau!!:)\n")
