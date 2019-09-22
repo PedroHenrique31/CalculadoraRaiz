@@ -25,10 +25,10 @@ numero = 3#só pra não perder
 ###############################processamento############################################################################
     #TODO: melhorar essa interface
     ##Resultado=Calculator.raiz_quadrada(numero)
-    if(opcao=1):
+    if(opcao==1):
         numero=int(input("Qual o número  desejas saber a raiz?"))
         Resultado=Calculator.calcula_raiz_limite(numero)
-    elif(opcao=2):
+    elif(opcao==2):
         numero=int(input("Digite o valor que quer calcular\n"))
         grau=int(input("Digite o grau da raiz que deseja calcular\n(Apenas valores inteiros são aceitos)\n"))
         Resultado=Calculator.calcula_raiz_generica(numero,grau)
