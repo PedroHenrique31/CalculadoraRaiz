@@ -4,7 +4,7 @@
     2-O método de Newton-Raphson usa a seguinte formula para se aproximar do resultado
 
 Obs: porque não testar com numeros grandes como os dos cartões de credito:
-    1-4984011032943903
+    1-5234213942469343
     2-5234219170632858-794
 '''
 #TODO: Melhorar a interface com usuário para organizar as funções.
