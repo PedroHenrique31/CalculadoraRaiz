@@ -6,6 +6,8 @@
 Obs: porque não testar com numeros grandes como os dos cartões de credito:
     1-5234213942469343
     2-5234219170632858-794
+    3-4984236077624809
+    4-5502096247409121-025
 '''
 #TODO: Melhorar a interface com usuário para organizar as funções.
 #TODO:tratar números negativos

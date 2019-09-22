@@ -8,7 +8,7 @@ o método de Newton-Raphson, que consiste da seguinte fórmula:
     X(n) é o enésimo valor de x;
 """
 
-#TODO:usar um somador deseries para calcular pi e outros numeros
+#TODO:usar um somador de series para calcular pi e outros numeros
 #Calcula a raiz
 def raiz_quadrada(incognita):
     chute=calc_ini(incognita)
@@ -20,10 +20,12 @@ def raiz_quadrada(incognita):
 #Calcula o chute inicial
 def calc_ini(Numero):
 #TODO:Otimizar a procura, talvez procura binaria, para reduzir os numeros buscados
-    n=1
+    n=Numero/2
     quadrado=n*n
+    #menor=(quadrado<Numero)
+
     while(quadrado<Numero):
-        n=n+1
+        n=(n+Numero)/2
         quadrado=n*n
     return n
 #Valor de precisão para parada
