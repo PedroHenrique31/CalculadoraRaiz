@@ -81,7 +81,7 @@ def calcula_raiz_generica(numero,grau):
     for n in range(0,teto_superior):
         func=funcao(palpite)
         dervfunc=derivada_funcao(palpite)
-        print("func={} dervfunc={} Raiz={} \n".format(func,dervfunc,palpite))
+       # print("func={} dervfunc={} Raiz={} \n".format(func,dervfunc,palpite))
         palpite=(palpite-(func/dervfunc))
     return palpite
 #TODO:Eliminar as chamadas rescursivas

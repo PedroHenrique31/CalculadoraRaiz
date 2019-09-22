@@ -44,6 +44,6 @@ else:
         Resultado='NÃO SELECIONADO!'
 
 ################################ Saída #################################################################################
-#print("A raiz é ",Resultado)
+print("A raiz é ",Resultado)
 print("E o mdc deles é {}".format(mdc))
 print("Obrigado por tudo,tchau!!:) :* bjão\n")
